@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accordion</title>
+    <script src="https://kit.fontawesome.com/b593391d68.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+     crossorigin="anonymous">
+     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+     <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+      
+</head>
+
+
+
+<body>
+
+  
+  <div class="bg-dark">
+    <div class="container">
+            <nav class=" navbar  navbar-expand-lg navbar-dark " >
+                    <a class="navbar-brand " href="">AdminBoard</a>
+                    <button class="navbar-toggler" type="button" 
+                         data-toggle="collapse" data-target="#navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="navbarContent" class="collapse navbar-collapse" >
+                      <ul class="navbar-nav">
+                       <li class="nav-item active">
+                          <a  class="nav-link" href="AdminBoard.html">Dashboard</a>
+                       </li>
+                       <li class="nav-item">
+                            <a  class="nav-link" href="Post.html">Post</a>
+                       </li>
+                       <li class="nav-item">
+                          <a  class="nav-link"  href="Categories.html">Categories</a>
+                       </li>
+                       <li class="nav-item">
+                            <a  class="nav-link"  href="Users.html">Utilisateurs</a>
+                         </li>
+                      </ul>
+                    </div>
+                    <div id="navbarContent" class="collapse navbar-collapse" >
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-user">  </i>  Bienvenu Tchoutchana
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="Edit-Profile.html">  <i class="fas fa-user-circle">  </i>  Profile</a>
+                          <a class="dropdown-item" href="paramettre.html"><i class="fas fa-cog"></i>Parametre</a>
+                        </div>
+                      </li>
+                       <li class="nav-item">
+                            <a  class="nav-link" id="Apropos" href="Logout.html"><i class="fas fa-user-times"></i>logout</a>
+                       </li>
+                      </ul>
+                    </div>
+            </nav>
+    </div>
+  </div>
+
+
+
+
+  <div class="bg-primary">
+    <div class="container pt-3 pb-3">
+      <nav class=" navbar navbar-expand-lg navbar-primary ">
+        <span class="text-light"> <i class="fas fa-2x fa-cog">     Dashboard</i></span>
+      </nav>
+    </div>
+  </div>
+ 
+
+
+
+<div class="bg-light">
+  <div class="container pt-4 pb-4" >
+    <nav class=" navbar navbar-expand-lg navbar-primary">
+    <div id="navbarContent" class="col-8">
+      <ul class="navbar-nav">
+        
+       <li class="mr-2 mb-2">
+        <button type="button" class="btn btn-primary form-control" data-toggle="modal" data-target="#Modal1">
+          <i class="fas fa-plus">   </i>   Ajouter un post
+        </button>
+
+
+        <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+              <div class="modal-header bg-primary text-light">
+                <h5 class="modal-title" id="exampleModalLabel">Image Upload</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Title</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Category</label>
+                    <div class="col-auto my-1">
+                      <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>Web Developpement</option>
+                        <option value="1">Tech Designer</option>
+                        <option value="2">Busnes</option>
+                        <option value="3">Health & weatness</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Example file input</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  </div>
+                  <div class="form-group mt-4 mb-4">
+                        <h3 class="h5 mb-4">Bio</h3>
+                        <div class="form-group">
+                          <textarea name="editor1">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, eligendi id maiores officia assumenda animi.
+                          </textarea>
+                        </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+       </li>
+  
+
+       <li class="mr-2 mb-2">
+        <button type="button" class="btn btn-success form-control" data-toggle="modal" data-target="#Modal2">
+          <i class="fas fa-plus">   </i>  Ajouter une Categorie
+        </button>
+
+        <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header bg-success text-light">
+                <h5 class="modal-title" id="exampleModalLabel">Ajouter Categorie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Title</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       </li>
+
+       <li class="">
+        <button type="button" class="btn btn-warning text-light form-control" data-toggle="modal" data-target="#Modal3">
+          <i class="fas fa-plus">  </i>  Ajouter un utilisateur
+        </button>
+        <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header bg-warning text-light">
+                <h5 class="modal-title " id="exampleModalLabel">Ajouter un Utilisateur</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Name</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Email</label>
+                    <input type="text" class="form-control" id="recipient-name" select>
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Password</label>
+                    <input type="text" class="form-control" id="recipient-name" >
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Confirm Password</label>
+                    <input type="text" class="form-control" id="recipient-name" >
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-warning">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       </li>
+
+      </ul>
+    </div>
+    </nav>
+  </div>
+</div>
+
+
+<br>
+
+
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-12">
+        <table class="table table-striped ">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Titre</th>
+              <th scope="col">Categories</th>
+              <th scope="col">Date du Post</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Post 1</td>
+              <td>Otto</td>
+              <td>Octobre 12 2009</td>
+              <td><a href="Post-One.html"><button type="button" class="btn btn-secondary"><i class="fas fa-angle-double-right">  </i>  Details</button></a></td>
+            </tr>
+            <tr class="tr-light"> 
+              <th scope="row">2</th>
+               <td>Post 2</td>
+              <td>Thornton</td>
+              <td>Octobre 12 2009</td>
+              <td><a href="Post-One.html"><button type="button" class="btn btn-secondary"><i class="fas fa-angle-double-right">  </i>  Details</button></a></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Post 3</td>
+              <td>the Bird</td>
+              <td>Octobre 13 2009</td>
+              <td><a href="Post-One.html"><button type="button" class="btn btn-secondary"><i class="fas fa-angle-double-right">  </i>  Details</button></a></td>
+            </tr>
+
+            <tr>
+              <th scope="row">4</th>
+              <td>Post 4</td>
+              <td>Otto</td>
+              <td>Octobre 14 2009</td>
+              <td><a href="Post-One.html"><button type="button" class="btn btn-secondary"><i class="fas fa-angle-double-right">  </i>  Details</button></a></td>
+            </tr>
+            <tr class="tr-light">
+              <th scope="row">5</th>
+              <td>Post 5</td>
+              <td>Thornton</td>
+              <td>Octobre 15 2009</td>
+              <td><a href="Post-One.html"><button type="button" class="btn btn-secondary"><i class="fas fa-angle-double-right">  </i>  Details</button></a></td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>Post 6</td>
+              <td>the Bird</td>
+              <td>Octobre 16 2009</td>
+              <td><a href="Post-One.html"><button type="button" class="btn btn-secondary"><i class="fas fa-angle-double-right">  </i>  Details</button></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-3 col-xs-12">
+        <ul class="navbar-nav">
+          <li>
+            <div class="border border-primary text-center text-light bg-primary pt-3 pb-3">
+              <h3>Posts</h3>
+              <div><i class="fas fa-2x fa-pencil-alt">6</i></div>
+               <button type="button" class="btn btn-outline-primary border border-white text-light mt-2">View</button>
+          </li>
+          <li>
+            <div class="border border-success text-center mt-2 text-light bg-success pt-3 pb-3">
+                <h3>Categories</h3>
+                <div>  <i class="fas fa-2x fa-users">4</i></div>
+                <button type="button" class="btn btn-outline-success border border-white text-light mt-2">View</button>
+            </div>
+          </li>
+          <li class=" ">
+            <div class="border border-warning text-center mt-2 text-light bg-warning pt-3 pb-3">
+                <h3>Utilisateurs</h3>
+                <div>  <i class="fas fa-2x fa-users">13</i></div>
+                <button type="button" class="btn btn-outline-warning border border-white text-light mt-2">View</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+
+
+
+<br>
+<!--footer-->
+
+<div class="container-fluid bg-dark pt-4 pb-3 text-light text-center">
+  <div class="container">
+      <div class="row">
+        <div class="col pt-5 pb-5">
+            <p class="pr-5">Copyright©Karanta2019</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
+      crossorigin="anonymous">
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous">
+        </script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
+      crossorigin="anonymous">
+      tinymce.init({
+      selector: 'textarea#default'
+        });
+      </script>
+    <script>
+      CKEDITOR.replace( 'editor1' );
+</script>
+</body>
+</html>
